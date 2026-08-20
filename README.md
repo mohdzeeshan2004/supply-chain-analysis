@@ -1,46 +1,155 @@
-# Supply Chain Analytics — Streamlit App
+# Supply Chain Analytics
 
-Interactive analytics application for the APL Logistics supply-chain dataset.
+An interactive data analytics project for exploring supply-chain revenue, profitability, customer value, product/category performance, and discount impact.
 
-## Dashboard modules
+## 🔗 Live Dashboard
 
-- Revenue & Profit Overview
-- Customer Value Dashboard
-- Product & Category Performance
-- Discount Impact Analyzer
+**Streamlit:** https://supplychainanalysis.streamlit.app/
+
+The dashboard uses an upload-based workflow. The cleaned dataset is **not stored in the repository**, avoiding large-file/repository size issues.
+
+## 📌 Project Overview
+
+This project analyzes an APL Logistics supply-chain dataset containing more than 180,000 transaction records.
+
+The analysis focuses on:
+- Revenue and profit performance
+- Profit margins
+- Customer value and customer segments
+- Product and category performance
+- Discount and profitability relationships
 - What-if discount scenarios
 
-## Important
+## 🎯 Objectives
 
-The dataset is **not bundled with the application**. This avoids GitHub/Streamlit repository file-size problems.
+1. Analyze overall supply-chain revenue and profitability.
+2. Compare performance across markets and categories.
+3. Identify high- and low-value customers.
+4. Evaluate product-level and category-level profitability.
+5. Examine the relationship between discounts and profit margins.
+6. Build an interactive dashboard for business analysis.
+7. Generate insights and practical recommendations.
 
-When the app starts, upload:
+## 🛠️ Technologies
 
-`APL_Logistics_cleaned.csv`
+- Python
+- Pandas
+- NumPy
+- Plotly
+- Streamlit
+- Exploratory Data Analysis (EDA)
+- Data Visualization
 
-The app validates the required columns before loading the dashboard.
+## 📊 Dashboard Modules
 
-## Run locally
+### 1. Revenue & Profit Overview
+- Total Sales
+- Total Profit
+- Profit Margin
+- Transactions
+- Units Sold
+- Average Order Value
+- Revenue by Market
+- Profit by Market
+- Category profitability
+
+### 2. Customer Value Dashboard
+- Total Customers
+- Average Customer Revenue
+- Average Customer Profit
+- Top and bottom customers by profit
+- Customer segment revenue and profit
+- Customer Value Matrix
+
+### 3. Product & Category Performance
+- Product revenue and profit
+- Product margins
+- Top products
+- Category profitability
+- Category profitability heatmap
+- Category performance matrix
+
+### 4. Discount Impact Analyzer
+- Discount vs Profit
+- Discount vs Profit Margin
+- Discount-band analysis
+- Discount/profit correlation
+- Discount/margin correlation
+- What-if discount scenarios
+
+## 📁 Dataset
+
+The cleaned APL Logistics dataset is uploaded directly through the Streamlit application.
+
+The application validates required fields before starting the analysis.
+
+The dataset is intentionally **not included in this GitHub repository** because of its large file size.
+
+## 🔬 Methodology
+
+```text
+Dataset
+   ↓
+Data Cleaning
+   ↓
+Data Validation
+   ↓
+Exploratory Data Analysis
+   ↓
+Business Analysis
+   ↓
+Interactive Visualization
+   ↓
+Insights
+   ↓
+Recommendations
+```
+
+## 📝 Project Outputs
+
+- Research Paper
+- Executive Analysis
+- Interactive Streamlit Dashboard
+
+The Research Paper covers the methodology, EDA, insights, recommendations, limitations, and conclusion.
+
+The Executive Analysis summarizes the major findings and their implications for business decision-makers.
+
+## ⚠️ Limitations
+
+- The analysis is based on the variables available in the supplied dataset.
+- The dataset does not contain a suitable order-date field for reliable monthly time-series analysis.
+- Correlation does not establish causation.
+- The discount what-if analysis is an analytical scenario estimate, not a financial forecast.
+- External factors such as fuel costs, infrastructure conditions, macroeconomic factors, and supplier performance are not included unless represented in the dataset.
+
+## 🚀 Run Locally
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Deploy
+Upload the cleaned CSV when prompted.
 
-Push only:
+## 📦 Repository Structure
 
-- `app.py`
-- `requirements.txt`
-- `README.md`
+```text
+Supply-Chain-Analytics/
+│
+├── app.py
+├── requirements.txt
+└── README.md
+```
 
-to GitHub and deploy the repository using Streamlit Community Cloud.
+## 📈 Project Outcome
 
-Do not upload the large CSV to the repository.
+The project demonstrates how exploratory data analysis and interactive visualization can transform a large supply-chain dataset into an accessible decision-support tool.
 
-## Data note
+The dashboard enables users to explore revenue, profitability, customer value, product/category performance, and discount-related patterns interactively.
 
-The supplied dataset has no usable order-date field, so the app does not fabricate monthly revenue or margin trends.
+## 👤 Project
 
-The discount scenario analyzer is an analytical what-if estimate, not a financial forecast.
+**Supply Chain Analytics — Data Science Project**
+
+Built using Python, Pandas, NumPy, Plotly, and Streamlit.
